@@ -157,6 +157,14 @@ export async function getPublicPosts(
   page = 1,
   orderType: "latest" | "trending" | "topRingersPosts" = "latest"
 ): Promise<PostsFetchResult> {
+  if (!BACKEND_URL) {
+    return {
+      posts: [],
+      meta: null,
+      error: "NEXT_PUBLIC_BELL3_BACKEND_URL is not configured",
+    };
+  }
+
   try {
     const data = await fetchJson(
       `/web/content/posts/all?page=${page}&order_type=${orderType}`
@@ -181,6 +189,14 @@ export async function getPublicPosts(
 export async function getNewsFeedPosts(
   page = 1
 ): Promise<PostsFetchResult> {
+  if (!BACKEND_URL) {
+    return {
+      posts: [],
+      meta: null,
+      error: "NEXT_PUBLIC_BELL3_BACKEND_URL is not configured",
+    };
+  }
+
   try {
     const data = await fetchJson(
       `/web/user/newsfeed/posts?page=${page}&order_type=latest`
