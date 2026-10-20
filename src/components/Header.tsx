@@ -25,6 +25,7 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
+                aria-current={active ? "page" : undefined}
                 className={`rounded-md px-3.5 py-2.5 text-base font-semibold transition-colors md:text-lg ${
                   active
                     ? "bg-brand/10 text-brand"
@@ -86,6 +87,7 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
+                  aria-current={active ? "page" : undefined}
                   className={`rounded-md px-3 py-3 text-lg font-semibold ${
                     active
                       ? "bg-brand/10 text-brand"
