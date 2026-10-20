@@ -1,0 +1,18 @@
+{
+  "default_branch": "main",
+  "branches": [
+    "feat/skip-link-and-api-guard",
+    "fix/footer-external-link-attrs",
+    "main"
+  ],
+  "parent": {
+    "feat/skip-link-and-api-guard": "main",
+    "fix/footer-external-link-attrs": "main",
+    "main": null
+  },
+  "order": [
+    "main",
+    "feat/skip-link-and-api-guard",
+    "fix/footer-external-link-attrs"
+  ]
+}
