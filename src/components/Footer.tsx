@@ -34,6 +34,8 @@ export function Footer() {
                 {"external" in link && link.external ? (
                   <a
                     href={link.href}
+                    target="_blank"
+                    rel="noreferrer noopener"
                     className="text-sm text-white/70 transition hover:text-white"
                   >
                     {link.label}
