@@ -30,3 +30,24 @@ body {
     text-wrap: balance;
   }
 }
+
+/* Keyboard-only skip link — off-screen until focused */
+.skip-to-content {
+  position: absolute;
+  left: 1rem;
+  top: -100%;
+  z-index: 100;
+  border-radius: 0.375rem;
+  background: var(--brand);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #fff;
+  transition: top 0.15s ease;
+}
+
+.skip-to-content:focus {
+  top: 1rem;
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
